@@ -1,5 +1,5 @@
-const { application } = require("express");
-const { Mongoose } = require("mongoose");
+const express = require("express");
+const mongoose = require("mongoose");
 
 const dbURI = config.get('dbURI');
 const port = process.env.PORT || 4000;
