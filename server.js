@@ -1,7 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require ('path');
-const 
+const config = require('config');
+
+const app = express();
+app.use
 
 const dbURI = config.get('dbURI');
 const port = process.env.PORT || 4000;
