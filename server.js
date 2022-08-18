@@ -4,7 +4,14 @@ const path = require ('path');
 const config = require('config');
 
 const app = express();
-app.use
+app.use(express.json());
+
+if (process.env.NODE_ENV === 'production'){
+    app.use(express.static('client/build'));
+    app.get('*', (req, res) => {
+        res.send
+    })
+}
 
 const dbURI = config.get('dbURI');
 const port = process.env.PORT || 4000;
