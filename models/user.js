@@ -16,5 +16,16 @@ const UserSchema = new Schema ({
         validate: [isEmail, 'Please enter valid email']
 
     },
+    password: {
+        type: String,
+        required: [true, 'Please enter a valid password'],
+        minlegnth: [6, 'Minimum password legnth is 6 characters']
+    },
+
+    register_date: {
+        type: Date,
+        default: Date.now
+
+    }
     
 })
