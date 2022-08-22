@@ -26,7 +26,11 @@ const CartSchema = new Schema ({
     ], 
     bill: {
         type: Number,
-        
+        required: true,
+        default: 0
+
     }
 
-});
+}); 
+
+module.exports = Cart = mongoose.model('cart', Cart)
