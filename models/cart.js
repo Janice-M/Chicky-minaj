@@ -7,5 +7,20 @@ const CartSchema = new Schema ({
         type: String
     },
 
+    items:[
+        {
+            productId:{
+                type: String
+            },
+            name : String,
+            quantity:{
+                type: Number,
+                required: true, 
+                min: []
+            }
+
+    }
+
+    ]
 
 });
