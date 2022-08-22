@@ -13,7 +13,11 @@ const OrderSchema = new Schema ({
             },
             name: {
                 type: String,
-                quantity
+                quantity: {
+                    type: Number,
+                    required: true
+                    min: [1, 'Quantity cannot be less than 1']
+                }
             }
         }
     ]
