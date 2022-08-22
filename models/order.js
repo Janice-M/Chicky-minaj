@@ -15,11 +15,23 @@ const OrderSchema = new Schema ({
                 type: String,
                 quantity: {
                     type: Number,
-                    required: true
+                    required: true,
                     min: [1, 'Quantity cannot be less than 1']
-                }
+                },
+            price: Number,
             }
         }
-    ]
+    ],
+    bill: {
+        type: Number, 
+        requires: true
+    },
+
+    date_added:{
+        type: Dte,
+        default: Date.now
+    }
+
 
 });
+
